@@ -1,12 +1,9 @@
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Calculator</p>
-      </header>
-    </div>
+    <React.Fragment>
+      <Display />
+      <ButtonPanel />
+    </React.Fragment>
   );
 }
 
