@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 function Display(props) {
-  const { result } = props;
+  const { result } = props; //destructure props declaration
   return (
     <h1>{result}</h1>
   );

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  const { name } = props;
+  const { name } = props; //destructure props declaration
   return (
     <button type="button">
       {name}
