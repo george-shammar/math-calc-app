@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
-/* eslint-disable */
+
 function Button(props) {
+  const { name } = props;
   return (
-    <button>
-      {props.name}
+    <button type="button">
+      {name}
     </button>
   );
 }
-/* eslint-enable */
+
 Button.propTypes = { name: PropTypes.string };
 Button.defaultProps = { name: '' };
 
