@@ -29,6 +29,12 @@ class ButtonPanel extends React.Component {
           {this.renderButton('6')}
           {this.renderButton('-')}
         </div>
+        <div>
+          {this.renderButton('1')}
+          {this.renderButton('2')}
+          {this.renderButton('3')}
+          {this.renderButton('+')}
+        </div>
       </div>
     );
   }
