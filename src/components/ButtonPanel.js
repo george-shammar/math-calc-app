@@ -1,17 +1,14 @@
 import React from 'react';
 import Button from './Button';
 
-function renderButton(i) {
-  return (
-    <Button name={i} />
-  );
-}
-
 class ButtonPanel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.renderButton = renderButton.bind(this);
+/* eslint-disable */
+  renderButton(i) {
+    return (
+      <Button name={i} />
+    );
   }
+  /* eslint-enable */
 
   render() {
     return (
