@@ -40,3 +40,9 @@ Directory is the name of your folder.
 npm install
 ```
 This command installs all the dependencies of the application. Once you complete all installations successfully, you're ready to use the application.
+
+- To start using the application, run:
+```
+npm start
+```
+- The calculator will open up in your browser.
