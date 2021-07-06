@@ -1,11 +1,16 @@
 import React from 'react';
 import Button from './Button';
-/* eslint-disable */
+
+function renderButton(i) {
+  return (
+    <Button name={i} />
+  );
+}
+
 class ButtonPanel extends React.Component {
-  renderButton(i) {
-    return (
-      <Button name = { i } />
-    );
+  constructor(props) {
+    super(props);
+    this.renderButton = renderButton.bind(this);
   }
 
   render() {
@@ -44,5 +49,5 @@ class ButtonPanel extends React.Component {
     );
   }
 }
-/* eslint-enable */
+
 export default ButtonPanel;
