@@ -10,7 +10,11 @@ const calculate = (buttonName, data) => {
     dataObject.total = new Big(`${data.total}.${data.total}`);
   } else if (buttonName === "AC") {
     dataObject.total = '0';
+  } else {
+    dataObject.total = new Big(data.total);
   }
+
+  
 };
 
 export default calculate;
