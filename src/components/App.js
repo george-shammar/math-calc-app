@@ -6,7 +6,12 @@ import calculate from '../logic/Calculate'; // eslint-disable-line no-unused-var
 class App extends React.Component {
   constructor(props) {
     super(props)
-    
+
+    this.state = { 
+      total: null,
+      next: null,
+      operation: null,
+    };
   }
   render() {
     return (
