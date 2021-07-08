@@ -15,7 +15,7 @@ const operate = (numberOne, numberTwo, operation) => {
         result = new Big(numberOne/numberTwo);
         return result;
     } else if (operation === '%') {
-        result = numberOne/100;
+        result = new Big(numberOne/100);
         return result;
     } else {
         result = '0';
