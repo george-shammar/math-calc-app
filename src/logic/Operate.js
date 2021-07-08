@@ -12,7 +12,7 @@ const operate = (numberOne, numberTwo, operation) => {
         result = new Big(numberOne * numberTwo);
         return result;
     } else if (operation === '÷') {
-        result = numberOne/numberTwo;
+        result = new Big(numberOne/numberTwo);
         return result;
     } else if (operation === '%') {
         result = numberOne/100;
