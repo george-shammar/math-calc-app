@@ -4,6 +4,10 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/Calculate'; // eslint-disable-line no-unused-vars
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    
+  }
   render() {
     return (
       <>
