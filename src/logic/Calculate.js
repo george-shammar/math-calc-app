@@ -7,7 +7,9 @@ const calculate = (buttonName, data) => {
       dataObject.total = new Big(data.total * -1);
       dataObject.next = new Big(data.next * -1);
   } else if (buttonName === ".") {
-    dataObject.total = `${data.total}.${data.total}`;
+    dataObject.total = new Big(`${data.total}.${data.total}`);
+  } else if (buttonName === "AC") {
+    dataObject.total = '0';
   }
 };
 
