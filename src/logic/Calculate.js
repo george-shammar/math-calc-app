@@ -1,3 +1,5 @@
+import operate from './Operate';
+
 const calculate = (buttonName, data) => {
   if (buttonName == "+/-") {
       const newTotal = data.total * -1;
