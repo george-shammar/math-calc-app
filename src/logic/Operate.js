@@ -17,6 +17,9 @@ const operate = (numberOne, numberTwo, operation) => {
     } else if (operation === '%') {
         result = numberOne/100;
         return result;
+    } else {
+        result = '0';
+        return result;
     }
 }
 
