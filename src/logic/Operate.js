@@ -11,5 +11,7 @@ const operate = (numberOne, numberTwo, operation) => {
     } else if (operation === 'X') {
         result = numberOne * numberTwo;
         return result;
+    } else if (operation === '÷') {
+        result = numberOne/numberTwo;
     }
 }
