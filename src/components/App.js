@@ -22,7 +22,7 @@ class App extends React.Component {
       total: result.total,
       next: result.next,
       operation: result.operation,
-    })
+    });
   }
 
   render() {
