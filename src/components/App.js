@@ -13,6 +13,11 @@ class App extends React.Component {
       operation: null,
     };
   }
+
+  handleClick(buttonName) {
+
+  }
+  
   render() {
     return (
       <>
