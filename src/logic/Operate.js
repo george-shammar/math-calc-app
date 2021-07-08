@@ -1,13 +1,15 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
+    const result = '';
     if (operation === '+') {
-        const result = numberOne + numberTwo;
+        result = numberOne + numberTwo;
         return result;
     } else if (operation === '-') {
-        const result = numberOne - numberTwo;
+        result = numberOne - numberTwo;
         return result;
     } else if (operation === 'X') {
-
+        result = numberOne * numberTwo;
+        return result;
     }
 }
