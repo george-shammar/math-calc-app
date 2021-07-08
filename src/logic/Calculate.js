@@ -15,7 +15,7 @@ const calculate = (buttonName, data) => {
   }
 
   if (buttonName === '+' || buttonName === '-' || buttonName === 'X' || buttonName === '÷' || buttonName === '%') {
-    operate(data.total, data.next, buttonName);
+    dataObject.total = operate(data.total, data.next, buttonName);
   }
 };
 
