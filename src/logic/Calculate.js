@@ -14,7 +14,9 @@ const calculate = (buttonName, data) => {
     dataObject.total = new Big(data.total);
   }
 
-  
+  if (buttonName === '+') {
+    operate(data.total, data.next, buttonName);
+  }
 };
 
 export default calculate;
