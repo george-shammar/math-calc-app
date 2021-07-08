@@ -19,3 +19,5 @@ const operate = (numberOne, numberTwo, operation) => {
         return result;
     }
 }
+
+export default operate;
