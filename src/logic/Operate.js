@@ -1,17 +1,20 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
+  const num1 = Big(numberOne);
+  const num2 = Big(numberTwo);
+
   let result = '';
   if (operation === '+') {
-    result = new Big(numberOne.plus(numberTwo));
+    result = num1.plus(num2);
   } else if (operation === '-') {
-    result = new Big(numberOne.minus(numberTwo));
+    result = num1.minus(num2);
   } else if (operation === 'X') {
-    result = new Big(numberOne * numberTwo);
+    result = num1.times(num2);
   } else if (operation === '÷') {
-    result = new Big(numberOne.div(numberTwo));
+    result = num1.div(num2);
   } else if (operation === '%') {
-    result = new Big(numberOne / 100);
+    result = num1 / 100;
   } else {
     result = '0';
   }
