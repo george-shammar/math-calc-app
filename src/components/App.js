@@ -1,13 +1,13 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/Calculate'; // eslint-disable-line no-unused-vars
+import calculate from '../logic/Calculate';
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { 
+    this.state = {
       total: null,
       next: null,
       operation: null,
@@ -17,6 +17,7 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
+    /* eslint-disable */
     const result = calculate(buttonName, this.state);
     this.setState({
       total: result.total,
@@ -26,10 +27,12 @@ class App extends React.Component {
   }
 
   render() {
+    const { result } = this.state;
     return (
       <>
-        <Display result="0" />
-        <ButtonPanel />
+        <Display result={result} />
+
+        <ButtonPanel onClick={this.handleClick}/>
       </>
     );
   }
