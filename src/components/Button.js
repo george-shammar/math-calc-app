@@ -1,15 +1,24 @@
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  const { name } = props; // destructure props declaration
+  const { clickHandler, buttonName } = props;
+  const handleClick = () => {
+    clickHandler(buttonName);
+  };
   return (
-    <button type="button">
-      {name}
+    <button type="button" onClick={handleClick}>
+      {buttonName}
     </button>
   );
 }
 
-Button.propTypes = { name: PropTypes.string };
-Button.defaultProps = { name: '' };
+Button.propTypes = {
+  buttonName: PropTypes.string,
+  clickHandler: PropTypes.func.isRequired,
+};
+
+Button.defaultProps = {
+  buttonName: null,
+};
 
 export default Button;

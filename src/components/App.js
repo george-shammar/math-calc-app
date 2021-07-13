@@ -16,23 +16,26 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName) {
-    /* eslint-disable */
-    const result = calculate(buttonName, this.state);
+  handleClick = (buttonName) => {
+    const data = this.state;
+    const calculus = calculate(buttonName, data);
     this.setState({
-      total: result.total,
-      next: result.next,
-      operation: result.operation,
+      ...calculus,
+      // total: calculus.total,
+      // next: calculus.next,
+      // operation: calculus.operation,
     });
   }
 
   render() {
-    const { result } = this.state;
+    const { total, next } = this.state;
+    const result = next ? next && next.toString() : total && total.toString();
+    console.log(this.state);
     return (
       <>
         <Display result={result} />
 
-        <ButtonPanel onClick={this.handleClick}/>
+        <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
   }

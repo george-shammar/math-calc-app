@@ -1,13 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-function renderButton(i) {
-  return (
-    <Button name={i} />
-  );
-}
+const ButtonPanel = ({ clickHandler }) => {
+  const handleClick = (buttonName) => {
+    clickHandler(buttonName);
+  };
 
-function ButtonPanel() {
+  const renderButton = (i) => (
+    <Button buttonName={i} clickHandler={handleClick} />
+  );
+
   return (
     <div>
       <div>
@@ -41,6 +44,10 @@ function ButtonPanel() {
       </div>
     </div>
   );
-}
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
