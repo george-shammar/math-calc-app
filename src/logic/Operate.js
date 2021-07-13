@@ -7,16 +7,18 @@ const operate = (numberOne, numberTwo, operation) => {
   let result = '';
   if (operation === '+') {
     result = num1.plus(num2);
-  } else if (operation === '-') {
+  }
+  if (operation === '-') {
     result = num1.minus(num2);
-  } else if (operation === 'X') {
+  }
+  if (operation === 'X') {
     result = num1.times(num2);
-  } else if (operation === '÷') {
+  }
+  if (operation === '÷') {
     result = num1.div(num2);
-  } else if (operation === '%') {
-    result = num1 / 100;
-  } else {
-    result = '0';
+  }
+  if (operation === '%') {
+    result = num1.mod(num2);
   }
 
   return result.toString();
