@@ -48,10 +48,6 @@ const ButtonPanel = (props) => {
   );
 };
 
-Button.propTypes = {
-  name: PropTypes.string,
-};
-
 ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
