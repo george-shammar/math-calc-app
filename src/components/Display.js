@@ -1,13 +1,21 @@
 import PropTypes from 'prop-types';
 
-function Display(props) {
-  const { result } = props;
+const Display = (props) => {
+  const { result, next, operation } = props;
   return (
-    <h1>{result}</h1>
+    <div>
+      <h1>{result}</h1>
+      <p>{operation}</p>
+      <p>{next}</p>
+    </div>
   );
-}
+};
 
 Display.defaultProps = { result: '0' };
-Display.propTypes = { result: PropTypes.string };
+Display.propTypes = {
+  result: PropTypes.string,
+  next: PropTypes.string.isRequired,
+  operation: PropTypes.string.isRequired,
+};
 
 export default Display;

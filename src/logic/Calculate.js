@@ -3,19 +3,17 @@ import operate from './Operate';
 const calculate = (data, buttonName) => {
   let { total, next, operation } = data;
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  const operations = ['+', '-', 'X', '÷', '%'];
+  const operations = ['+', '-', 'X', '÷'];
+
+  if (buttonName === 'AC') {
+    total = 0;
+    next = null;
+    operation = null;
+  }
 
   if (buttonName === '+/-') {
     total *= -1;
     next *= -1;
-    return data;
-  }
-
-  if (buttonName === 'AC') {
-    total = '';
-    next = '';
-    operation = null;
-    return data;
   }
 
   if (buttonName === '.') {
@@ -23,24 +21,37 @@ const calculate = (data, buttonName) => {
       total = '0.';
     }
 
-    if (total && !operation) {
-      total += '.';
+    if (total && !next) {
+      if (operation) {
+        next += '0.';
+      } else if (total.indexOf('.') === -1) {
+        total += '.';
+      }
     }
 
-    if (operation && !next) {
-      next += '0.';
+    if (total && operation && next) {
+      if (next.indexOf('.') === -1) {
+        next += '.';
+      }
     }
+  }
 
-    if (operation && next) {
-      next += '0.';
+  if (buttonName === '%') {
+    if (!next) {
+      total /= 100;
+    } else {
+      next /= 100;
     }
-
-    return data;
   }
 
   if (operations.includes(buttonName)) {
-    operation = buttonName;
-    return data;
+    if (!total) total = '0';
+    if (total && !next) {
+      operation = buttonName;
+    }
+    if (total && next && operation) {
+      total = operate(total, next, operation);
+    }
   }
 
   if (numbers.includes(buttonName)) {
@@ -55,21 +66,24 @@ const calculate = (data, buttonName) => {
     } else {
       next += buttonName;
     }
-    return data;
   }
 
   if (buttonName === '=') {
-    let result;
-    if (!total && !next) result = 0;
-    if (total && !operation && !next) result = total;
-    if (total && operation && !next) result = total;
-    if (total && operation && next) {
-      result = operate(total, next, operation);
+    if (total && !next) {
+      const result = total;
+      total = result;
     }
-    return result;
+    if (!total && !next) {
+      total = '0';
+    }
+    if (total && next && operation) {
+      total = operate(total, next, operation);
+      next = null;
+      operation = null;
+    }
   }
 
-  return data;
+  return { total, next, operation };
 };
 
 export default calculate;

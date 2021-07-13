@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = ({ clickHandler }) => {
+const ButtonPanel = (props) => {
+  const { clickHandler } = props;
+
   const handleClick = (buttonName) => {
     clickHandler(buttonName);
   };
@@ -44,6 +46,10 @@ const ButtonPanel = ({ clickHandler }) => {
       </div>
     </div>
   );
+};
+
+Button.propTypes = {
+  name: PropTypes.string,
 };
 
 ButtonPanel.propTypes = {
