@@ -14,7 +14,7 @@ This is a simple calculator application developed to demonstrate React.js's func
 
 
 ## Live Demo
-[Deployed app](https://math-calc-app.herokuapp.com)
+[Deployed app](https://fervent-sammet-cc944d.netlify.app/)
 
 ## Getting Started
 
