@@ -11,7 +11,7 @@ const ButtonPanel = (props) => {
   };
 
   const renderButton = (i) => (
-    <Button buttonName={i} clickHandler={handleClick} color='orange' wide='true' />
+    <Button buttonName={i} clickHandler={handleClick} />
   );
 
   return (

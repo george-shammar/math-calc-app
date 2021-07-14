@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import '../stylesheets/button.css';
 
 const Button = (props) => {
-  const { clickHandler, buttonName, color, wide } = props;
+  const { clickHandler, buttonName } = props;
 
   const handleClick = () => {
     clickHandler(buttonName);
@@ -18,6 +18,7 @@ const Button = (props) => {
 Button.propTypes = {
   buttonName: PropTypes.string,
   clickHandler: PropTypes.func.isRequired,
+  // color: PropTypes.string,
 };
 Button.defaultProps = {
   buttonName: null,
