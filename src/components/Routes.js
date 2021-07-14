@@ -1,2 +1,15 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+const Routes = () => {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/calculator" component={Calculator} />
+        </Switch>
+      </BrowserRouter>
+    );
+  };
+
+export default Routes;
