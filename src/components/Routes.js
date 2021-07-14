@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Quote from './Quote';
 import App from './App';
+import Navbar from "./Navbar";
 
 const Routes = () => (
   <BrowserRouter>
