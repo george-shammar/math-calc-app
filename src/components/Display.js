@@ -7,7 +7,7 @@ const Display = (props) => {
     <div className="bg-display">
       <h1 className="result">{result}</h1>
       <p className="result">{operation}</p>
-      <p>{next}</p>
+      <p className="result">{next}</p>
     </div>
   );
 };
