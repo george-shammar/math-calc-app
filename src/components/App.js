@@ -30,7 +30,7 @@ class App extends React.Component {
     const { total, next, operation } = this.state;
     return (
       <>
-        <Display result={total} next={next} operation={operation} />
+        <Display result={total} next={next} operation={operation} className="display"/>
 
         <ButtonPanel clickHandler={this.handleClick} />
       </>
