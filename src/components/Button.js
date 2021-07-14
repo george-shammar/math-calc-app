@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import '../stylesheets/button.css';
 
 const Button = (props) => {
-  const { clickHandler, buttonName } = props;
+  const { clickHandler, buttonName, color, wide } = props;
 
   const handleClick = () => {
     clickHandler(buttonName);
