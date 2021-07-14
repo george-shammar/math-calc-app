@@ -6,18 +6,20 @@ import App from './App';
 import Navbar from './Navbar';
 
 const Routes = () => (
-  <div>
-    <nav>
-      <Navbar />
-    </nav>
-    <BrowserRouter>
+  <BrowserRouter>
+    <div>
+      <nav>
+        <Navbar />
+      </nav>
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/calculator" component={App} />
         <Route exact path="/quote" component={Quote} />
       </Switch>
-    </BrowserRouter>
-  </div>
+    </div>
+  </BrowserRouter>
+
 );
 
 export default Routes;
