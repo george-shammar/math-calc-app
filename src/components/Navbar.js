@@ -5,8 +5,8 @@ function Navbar() {
     return (
         <div>
           <Link to="/">Home </Link>
-          <Link to="/profile">Profile</Link>
-          <Link to="/about">About Us </Link>
+          <Link to="/calculator">Calculator </Link>
+          <Link to="/quote">Quote </Link>
         </div>
     );
 };
