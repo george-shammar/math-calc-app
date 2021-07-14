@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../stylesheets/button.css';
 
 const Button = (props) => {
   const { clickHandler, buttonName } = props;
