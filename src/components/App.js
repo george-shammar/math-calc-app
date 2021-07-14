@@ -2,6 +2,7 @@ import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/Calculate';
+import '../stylesheets/app.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,9 +31,13 @@ class App extends React.Component {
     const { total, next, operation } = this.state;
     return (
       <>
-        <Display result={total} next={next} operation={operation} />
 
-        <ButtonPanel clickHandler={this.handleClick} />
+        <h2>Lets do some maths!</h2>
+        <div className="container">
+          <Display result={total} next={next} operation={operation} className="display" />
+
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
       </>
     );
   }
