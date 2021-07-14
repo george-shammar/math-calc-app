@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Quote from "./Quote";
 import Home from "./Home";
+import Quote from "./Quote";
 
 const Routes = () => {
     return (
