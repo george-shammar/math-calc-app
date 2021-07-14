@@ -1,7 +1,7 @@
 .result {
     color: white;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-right: 5px;
+    text-align: end;
 }
 
 .bg-display {
