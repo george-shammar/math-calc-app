@@ -22,25 +22,25 @@ const ButtonPanel = (props) => {
         {renderButton('%')}
         {renderButton('÷')}
       </div>
-      <div>
+      <div className="button-row">
         {renderButton('7')}
         {renderButton('8')}
         {renderButton('9')}
         {renderButton('X')}
       </div>
-      <div>
+      <div className="button-row">
         {renderButton('4')}
         {renderButton('5')}
         {renderButton('6')}
         {renderButton('-')}
       </div>
-      <div>
+      <div className="button-row">
         {renderButton('1')}
         {renderButton('2')}
         {renderButton('3')}
         {renderButton('+')}
       </div>
-      <div>
+      <div className="button-row">
         {renderButton('0')}
         {renderButton('.')}
         {renderButton('=')}
