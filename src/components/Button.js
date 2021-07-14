@@ -9,7 +9,7 @@ const Button = (props) => {
   };
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" onClick={handleClick} className="button">
       {buttonName}
     </button>
   );
