@@ -16,7 +16,7 @@ const ButtonPanel = (props) => {
 
   return (
     <div>
-      <div>
+      <div className="button-row">
         {renderButton('AC')}
         {renderButton('+/-')}
         {renderButton('%')}
