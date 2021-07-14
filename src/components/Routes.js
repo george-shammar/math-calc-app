@@ -7,9 +7,9 @@ import App from './App';
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/calculator" component={App} />
-      <Route path="/quote" component={Quote} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/calculator" component={App} />
+      <Route exact path="/quote" component={Quote} />
     </Switch>
   </BrowserRouter>
 );
