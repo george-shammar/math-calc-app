@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import '../stylesheets/display.css';
 
 const Display = (props) => {
-  const { result, next, operation } = props;
+  const { result, operation } = props;
   return (
     <div className="bg-display">
       <h1 className="result">{result}</h1>
       <p>{operation}</p>
-      <p>{next}</p>
     </div>
   );
 };
@@ -15,7 +14,6 @@ const Display = (props) => {
 Display.defaultProps = { result: '0' };
 Display.propTypes = {
   result: PropTypes.string,
-  next: PropTypes.string.isRequired,
   operation: PropTypes.string.isRequired,
 };
 
