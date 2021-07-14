@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../stylesheets/display.css';
 
 const Display = (props) => {
   const { result, next, operation } = props;
