@@ -4,7 +4,7 @@ import '../stylesheets/display.css';
 const Display = (props) => {
   const { result, next, operation } = props;
   return (
-    <div>
+    <div className="bg-display">
       <h1 className="result">{result}</h1>
       <p>{operation}</p>
       <p>{next}</p>
