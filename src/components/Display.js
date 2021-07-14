@@ -6,8 +6,8 @@ const Display = (props) => {
   return (
     <div className="bg-display">
       <h1 className="result">{result}</h1>
-      <p className="result">{operation}</p>
-      <p className="result">{next}</p>
+      <p>{operation}</p>
+      <p>{next}</p>
     </div>
   );
 };
