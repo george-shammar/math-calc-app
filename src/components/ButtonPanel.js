@@ -41,9 +41,7 @@ const ButtonPanel = (props) => {
         {renderButton('+')}
       </div>
       <div className="button-row">
-        <span id="zero">
-          {renderButton('0')}
-        </span>
+        {renderButton('0')}
         {renderButton('.')}
         {renderButton('=')}
       </div>
