@@ -17,10 +17,11 @@ const Button = (props) => {
 
 Button.propTypes = {
   buttonName: PropTypes.string,
-  clickHandler: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func,
 };
 Button.defaultProps = {
   buttonName: null,
+  clickHandler: null,
 };
 
 export default Button;

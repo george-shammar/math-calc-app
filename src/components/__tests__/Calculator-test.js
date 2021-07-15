@@ -25,11 +25,3 @@ describe('Display', () => {
     expect(wrapper.find('.bg-display').length).toBeTruthy;
   });
 });
-
-describe('Button', () => {
-  let wrapper;
-  it('wraps content in a div with .button class', () => {
-    wrapper = shallow(<Button />);
-    expect(wrapper.find('.button').length).toEqual(1);
-  });
-});
