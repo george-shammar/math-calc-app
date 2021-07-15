@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Display from '../Display';
+import Button from '../Button';
 
 describe('Display', () => {
   let wrapper;
@@ -25,3 +26,10 @@ describe('Display', () => {
   });
 });
 
+describe('Button', () => {
+  let wrapper;
+  it('wraps content in a div with .button class', () => {
+    wrapper = shallow(<Button />);
+    expect(wrapper.find('.button').length).toEqual(1);
+  });
+});
