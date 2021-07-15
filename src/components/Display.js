@@ -11,10 +11,10 @@ const Display = (props) => {
   );
 };
 
-Display.defaultProps = { result: '0' };
+Display.defaultProps = { result: '0', operation: '' };
 Display.propTypes = {
   result: PropTypes.string,
-  operation: PropTypes.string.isRequired,
+  operation: PropTypes.string,
 };
 
 export default Display;
