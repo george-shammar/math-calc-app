@@ -5,7 +5,6 @@ const Display = (props) => {
   const { result, operation } = props;
   return (
     <div>
-      <h1 className="title">Calculator</h1>
       <div className="bg-display">
         <h1 className="result">{result}</h1>
         <p>{operation}</p>
