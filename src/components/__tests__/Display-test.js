@@ -13,5 +13,10 @@ describe("Display", () => {
         wrapper = shallow(<Display />);
         expect(wrapper.find(".bg-display").length).not.toEqual(null);
     });
+
+    it("must display valid contents that is defined", () => {
+        wrapper = shallow(<Display />);
+        expect(wrapper.find(".bg-display").length).toBeDefined;
+    });
 });
   
