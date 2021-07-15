@@ -24,3 +24,4 @@ describe('Display', () => {
     expect(wrapper.find('.bg-display').length).toBeTruthy;
   });
 });
+
