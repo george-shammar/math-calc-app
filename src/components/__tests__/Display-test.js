@@ -8,5 +8,10 @@ describe("Display", () => {
         wrapper = shallow(<Display />);
         expect(wrapper.find(".bg-display").length).toEqual(1);
     });
+
+    it("must show valid contents and NOT null", () => {
+        wrapper = shallow(<Display />);
+        expect(wrapper.find(".bg-display").length).not.toEqual(null);
+    });
 });
   
