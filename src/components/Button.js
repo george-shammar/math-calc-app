@@ -18,7 +18,6 @@ const Button = (props) => {
 Button.propTypes = {
   buttonName: PropTypes.string,
   clickHandler: PropTypes.func.isRequired,
-  // color: PropTypes.string,
 };
 Button.defaultProps = {
   buttonName: null,
