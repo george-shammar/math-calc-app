@@ -20,6 +20,12 @@ it('renders the Display component correctly with next props', () => {
     expect(tree).toMatchSnapshot();
 });
 
+it('renders the Display component correctly with operation props', () => {
+    const operation = '+'
+    const tree = renderer.create(<Display operation={operation} />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it('renders the App component correctly', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
