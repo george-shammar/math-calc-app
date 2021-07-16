@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ButtonPanel from '../ButtonPanel';
+import ButtonPanel from '../../ButtonPanel';
 
 describe('ButtonPanel', () => {
   let wrapper;
