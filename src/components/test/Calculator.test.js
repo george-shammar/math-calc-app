@@ -8,12 +8,20 @@ it('renders the Display component correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
+it('renders the Display component correctly with result props', () => {
+    const total = '13'
+    const tree = renderer.create(<Display result={total} />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it('renders the Display component correctly with result props', () => {
+    const next = '20'
+    const tree = renderer.create(<Display result={next} />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
 it('renders the App component correctly', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
 });
 
-it('renders the App component correctly with result props', () => {
-    const tree = renderer.create(<App />).toJSON();
-    expect(tree).toMatchSnapshot();
-});
