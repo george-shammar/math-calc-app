@@ -1,7 +1,7 @@
 .container {
-    display: flex;
-    width: 700px;
-    flex-direction: column;
-    margin-left: 25%;
-    margin-top: 5%;
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-top: 5%;
 }
