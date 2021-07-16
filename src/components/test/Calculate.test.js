@@ -10,7 +10,6 @@ describe('calculate', () => {
     expect(typeof result).toEqual('object');
   });
 
-
   it('Should return a string as Total', () => {
     const result = calculate({ total: '6', next: null, operation: null }, 13);
     expect(typeof result.total).toEqual('string');

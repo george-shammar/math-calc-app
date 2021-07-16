@@ -4,7 +4,7 @@ describe(' Operate', () => {
   it('Should make operate a function', () => {
     expect(typeof operate).toEqual('function');
   });
-  
+
   it('Should return a string', () => {
     const result = operate('34', '45', '+');
     expect(typeof result).toEqual('string');

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import { shallow } from 'enzyme';
 import ButtonPanel from '../../ButtonPanel';
@@ -22,6 +23,6 @@ describe('ButtonPanel', () => {
 
   it('must be truthy', () => {
     wrapper = shallow(<ButtonPanel />);
-    expect(wrapper.find('.button-row').length).toBeTruthy;
+    expect(wrapper.find('.button-row')).toBeTruthy;
   });
 });
