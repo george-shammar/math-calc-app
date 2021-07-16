@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Display from '../Display';
 import App from '../App';
+import ButtonPanel from '../ButtonPanel';
 
 it('renders the Display component correctly', () => {
     const tree = renderer.create(<Display />).toJSON();
@@ -28,6 +29,11 @@ it('renders the Display component correctly with operation props', () => {
 
 it('renders the App component correctly', () => {
     const tree = renderer.create(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it('renders the ButtonPanel component correctly', () => {
+    const tree = renderer.create(<ButtonPanel />).toJSON();
     expect(tree).toMatchSnapshot();
 });
 
