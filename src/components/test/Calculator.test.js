@@ -14,9 +14,9 @@ it('renders the Display component correctly with result props', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('renders the Display component correctly with result props', () => {
+it('renders the Display component correctly with next props', () => {
     const next = '20'
-    const tree = renderer.create(<Display result={next} />).toJSON();
+    const tree = renderer.create(<Display next={next} />).toJSON();
     expect(tree).toMatchSnapshot();
 });
 

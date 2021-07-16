@@ -365,6 +365,21 @@ exports[`renders the Display component correctly 1`] = `
 </div>
 `;
 
+exports[`renders the Display component correctly with next props 1`] = `
+<div
+  className="bg-display"
+>
+  <h1
+    className="result"
+  >
+    0
+  </h1>
+  <p>
+    
+  </p>
+</div>
+`;
+
 exports[`renders the Display component correctly with result props 1`] = `
 <div
   className="bg-display"
