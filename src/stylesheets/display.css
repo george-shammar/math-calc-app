@@ -1,10 +1,10 @@
 .result {
-    color: white;
-    padding-right: 5px;
-    text-align: end;
+  color: white;
+  padding-right: 5px;
+  text-align: end;
 }
 
 .bg-display {
-    background-color: grey;
-    height: 100px;
+  background-color: grey;
+  height: 100px;
 }
