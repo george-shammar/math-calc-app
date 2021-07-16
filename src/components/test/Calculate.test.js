@@ -5,4 +5,9 @@ describe('calculate', () => {
     expect(typeof calculate).toEqual('function');
   });
 
+  it('Should return an object', () => {
+    const result = calculate({ total: null, next: null, operation: null }, 45);
+    expect(typeof result).toEqual('object');
+  });
+
 });
